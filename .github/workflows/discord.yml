@@ -1,0 +1,38 @@
+name: Notify Discord on Push
+
+on:
+  push:
+    branches:
+      - main
+      - frontend   # add more branches if needed
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Extract branch name
+        run: echo "BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+
+      - name: Format commit messages
+        run: |
+          echo "COMMITS<<EOF" >> $GITHUB_ENV
+          for commit in $(jq -r '.commits[].id' <<< '${{ toJson(github.event) }}'); do
+            msg=$(jq -r --arg c "$commit" '.commits[] | select(.id==$c) | .message' <<< '${{ toJson(github.event) }}')
+            author=$(jq -r --arg c "$commit" '.commits[] | select(.id==$c) | .author.name' <<< '${{ toJson(github.event) }}')
+            url=$(jq -r --arg c "$commit" '.commits[] | select(.id==$c) | .url' <<< '${{ toJson(github.event) }}')
+            echo "• **$author**: $msg ([view]($url))" >> $GITHUB_ENV
+          done
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Send Discord Webhook
+        uses: Ilshidur/action-discord@master
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          args: |
+            📌 **New push to `${{ github.repository }}`**
+            🌿 Branch: `${{ env.BRANCH }}`
+            👤 Pushed by: ${{ github.actor }}
+            🔗 [Compare changes](${{ github.event.compare }})
+
+            ${{ env.COMMITS }}

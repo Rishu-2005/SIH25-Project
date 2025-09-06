@@ -27,8 +27,9 @@ jobs:
 
       - name: Send Discord Webhook
         uses: Ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
           args: |
             📌 **New push to `${{ github.repository }}`**
             🌿 Branch: `${{ env.BRANCH }}`

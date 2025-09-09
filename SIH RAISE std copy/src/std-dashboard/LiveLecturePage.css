@@ -1,0 +1,356 @@
+.livelecture {
+  display: flex;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: #f9f9fb;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #f5f8ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border-right: 1px solid #ddd;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.sidebar li {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.role {
+  font-size: 12px;
+  color: gray;
+}
+
+.profile-btn {
+  margin-left: auto;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+/* Main Lecture */
+.lecture-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.lecture-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.outline-btn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.lecture-video {
+  position: relative;
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.lecture-video {
+  position: relative;
+  flex: 1;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lecture-video.waiting {
+  background: linear-gradient(135deg, #e0e7ff, #f3f4f6);
+}
+
+.waiting-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.live-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.stats {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* Controls */
+.lecture-controls {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.lecture-controls button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #e8ecf7;
+  cursor: pointer;
+}
+
+.raise-hand {
+  background: #3b82f6;
+  color: white;
+}
+
+.leave {
+  background: #ff3131;
+  color: white;
+}
+
+/* Chat Section */
+.chat-section {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ddd;
+  background: #fff;
+}
+
+.chat-tabs {
+  display: flex;
+}
+
+.chat-tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #f4f4f7;
+  font-weight: 600;
+}
+
+.chat-tabs button.active {
+  background: #fff;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  background: #f3f6fc;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #eee;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.send-btn {
+  margin-left: 8px;
+  padding: 8px 12px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Resources */
+.resources {
+  border-top: 1px solid #eee;
+  padding: 10px;
+}
+
+.resource {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.resource div {
+  display: flex;
+  flex-direction: column;
+}
+
+.size {
+  font-size: 12px;
+  color: gray;
+}
+
+.download {
+  background: #3b82f6;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.open {
+  background: #10b981;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Footer Info */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  color: gray;
+}
+
+/* .sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar li img {
+  width: 18px;
+  height: 18px;
+} */
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #374151; /* normal gray text */
+}
+
+.sidebar li img {
+  width: 18px;
+  height: 18px;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.sidebar li.active img,
+.sidebar li:hover img {
+  filter: brightness(0) invert(1); /* turn white */
+}
+
+.lecture-controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: black;
+}
+
+.lecture-controls img {
+  width: 18px;
+  height: 18px;
+}
+
+.send-btn img {
+  width: 18px;
+  height: 18px;
+}

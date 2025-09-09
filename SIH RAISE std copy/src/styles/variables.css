@@ -1,0 +1,18 @@
+:root {
+  /* Colors */
+  --color-bg-light: #F1F5F9;
+  --color-bg-card: #F5F7FC;
+  --color-bg-hover: #E6EEF9;
+  --color-primary: #254AA5;
+  --color-text: #6B7280;
+  --color-border: #E6EEF9;
+
+  /* Font */
+  --font-family: 'Inter', sans-serif;
+
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-xl: 48px;
+}

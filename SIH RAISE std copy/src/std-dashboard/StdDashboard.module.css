@@ -1,0 +1,56 @@
+@import "../styles/variables.css";
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-bg-light);
+}
+
+/* Sidebar stays fixed width */
+.layout > :first-child {
+  width: 240px;
+  border-right: 1px solid var(--color-bg-hover);
+  background: var(--color-bg-light);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pushes Topbar at top and Footer at bottom */
+.contentGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1fr; /* left, center, right */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left column (Quick Actions + Overview) */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Center column (Today’s Schedule) */
+.centerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Right column (Notifications + Messages) */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Footer full width */
+.main > :last-child {
+  background: #fff;
+  border-top: 1px solid var(--color-bg-hover);
+}

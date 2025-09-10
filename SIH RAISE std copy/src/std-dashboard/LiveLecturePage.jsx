@@ -15,7 +15,6 @@ import raiseHandIcon from "../assets/hand.svg";
 import openChatIcon from "../assets/chat.svg";
 import shareScreenIcon from "../assets/screenshare.svg"; 
 import leaveIcon from "../assets/leave.svg"; 
-import sendIcon from "../assets/send.svg";
 
 export default function LiveLecturePage() {
   return (
@@ -24,8 +23,6 @@ export default function LiveLecturePage() {
       {/* Sidebar */}
       <aside className="sidebar">
         <div className="brand">
-          {/* <div className="brand-icon">R</div>s */}
-          {/* <h2>RAISE</h2> */}
           <img src={logoIcon} alt="RAISE" />
         </div>
         <nav>
@@ -36,7 +33,7 @@ export default function LiveLecturePage() {
   <li><img src={notifIcon} alt="Notifications" /> Notifications</li>
   <li><img src={chatIcon} alt="Chat" /> Chat</li>
   <li><img src={materialsIcon} alt="Materials" /> Materials</li>
-  {/* <li><img src={avatarIcon} alt="Profile" /> Profile</li> */}
+
 </ul>
         </nav>
         <div className="profile">
@@ -48,7 +45,6 @@ export default function LiveLecturePage() {
             <p className="name">Rishabh Gupta</p>
             <span className="role">Student</span>
           </div>
-          {/* <button className="profile-btn">Profile</button> */}
         </div>
       </aside>
 
@@ -57,7 +53,7 @@ export default function LiveLecturePage() {
         
         {/* Header */}
         <header className="lecture-header">
-          <h3>📡 Intro to Algorithms – Week 4</h3>
+          <h3>Artificial Intelligence</h3>
           <div>
             <button className="outline-btn">Share Link</button>
             <button className="outline-btn">Report Issue</button>
@@ -90,8 +86,8 @@ export default function LiveLecturePage() {
         </div>
 
         <div className="chat-messages">
-          <div className="message"><strong>Yashasv Gupta:</strong> Could you explain the difference between BFS and DFS again?</div>
-          <div className="message"><strong>Shivam Singh:</strong> The example with the tree traversal really helped, thanks!</div>
+          <div className="message"><strong>Yashasv Gupta:</strong> Could you explain the difference between supervised and unsupervised learning again?</div>
+          <div className="message"><strong>Shivam Singh:</strong> The example with neural networks really helped, thanks!</div>
           <div className="message"><strong>Pranay Kumar:</strong> Is the homework due before next class or end of week?</div>
           <div className="message"><strong>Ayush Singh:</strong> This is very helpful 🙌</div>
         </div>
@@ -106,21 +102,21 @@ export default function LiveLecturePage() {
         <div className="resources">
           <div className="resource">
             <div>
-              📄 Lecture Slides – Week 4
+              Lecture Slides – Week 4
               <span className="size">PDF · 100KB</span>
             </div>
             <button className="download">Download</button>
           </div>
           <div className="resource">
             <div>
-              🔗 Reading List
+              Reading List
               <span className="size">Links · 6 items</span>
             </div>
             <button className="open">Open</button>
           </div>
           <div className="resource">
             <div>
-              📝 Assignment Brief
+              Assignment Brief
               <span className="size">DOC · 120KB</span>
             </div>
             <button className="download">Download</button>

@@ -15,12 +15,12 @@ export default function Overview() {
           <div className={styles.value}>7</div>
         </div>
         <div className={styles.item}>
-          <div className={styles.label}>Unread Messages</div>
-          <div className={styles.value}>7</div>
+          <div className={styles.label}>Assignments Due</div>
+          <div className={styles.value}>3</div>
         </div>
         <div className={styles.item}>
-          <div className={styles.label}>Unread Messages</div>
-          <div className={styles.value}>7</div>
+          <div className={styles.label}>Recent Notifications</div>
+          <div className={styles.value}>2</div>
         </div>
       </div>
     </section>

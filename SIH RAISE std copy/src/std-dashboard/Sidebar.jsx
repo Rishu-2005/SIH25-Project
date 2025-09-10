@@ -4,6 +4,7 @@ import NotificationsIcon from "../assets/notifications.svg?react";
 import ChatIcon from "../assets/chat.svg?react";
 import MaterialsIcon from "../assets/materials.svg?react";
 import LogoIcon from "../assets/logo.svg?react";
+import TimeTableIcon from "../assets/timetable.svg?react";
 
 export default function Sidebar() {
   return (
@@ -17,6 +18,9 @@ export default function Sidebar() {
       <nav className={styles.nav}>
         <button className={`${styles.navItem} ${styles.active}`}>
           <DashboardIcon className={styles.icon} /> Dashboard
+        </button>
+        <button className={styles.navItem}>
+          <TimeTableIcon className={styles.icon} /> Time Table
         </button>
         <button className={styles.navItem}>
           <NotificationsIcon className={styles.icon} /> Notifications
@@ -33,7 +37,7 @@ export default function Sidebar() {
       <div className={styles.userCard}>
         <div className={styles.avatar}></div>
         <div>
-          <div className={styles.userName}>John Doe</div>
+          <div className={styles.userName}>Rishabh Gupta</div>
           <div className={styles.userRole}>Student</div>
         </div>
       </div>

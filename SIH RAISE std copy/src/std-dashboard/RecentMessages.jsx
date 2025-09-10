@@ -23,7 +23,7 @@ export default function RecentMessages() {
           <div className={styles.avatar}></div>
           <div className={styles.content}>
             <div className={styles.topRow}>
-              <span className={styles.name}>Class Rep</span>
+              <span className={styles.name}>Ms. Chopra</span>
               <span className={styles.time}>Yesterday</span>
             </div>
             <div className={styles.message}>
@@ -36,7 +36,7 @@ export default function RecentMessages() {
           <div className={styles.avatar}></div>
           <div className={styles.content}>
             <div className={styles.topRow}>
-              <span className={styles.name}>Prof. Mehta</span>
+              <span className={styles.name}>Dr. Jain</span>
               <span className={styles.time}>2d ago</span>
             </div>
             <div className={styles.message}>

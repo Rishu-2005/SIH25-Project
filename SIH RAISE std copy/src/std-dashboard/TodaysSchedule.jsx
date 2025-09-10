@@ -14,7 +14,7 @@ export default function TodaysSchedule() {
         <div className={styles.item}>
           <div className={styles.info}>
             <div className={styles.subject}>Artificial Intelligence</div>
-            <div className={styles.time}>9:00 AM – 10:00 AM</div>
+            <div className={styles.time}>8:00 AM – 8:50 AM</div>
           </div>
           <div className={styles.controls}>
             <button className={styles.btnOutline}>Details</button>
@@ -26,7 +26,30 @@ export default function TodaysSchedule() {
             </button>
           </div>
         </div>
+
+      <div className={styles.item}>
+          <div className={styles.info}>
+            <div className={styles.subject}>VLSI</div>
+            <div className={styles.time}>8:50 AM – 9:40 PM</div>
+          </div>
+          <div className={styles.controls}>
+            <button className={styles.btnOutline}>Details</button>
+            {/* <button className={styles.btnPrimary}>Join</button> */}
+          </div>
+        </div>
+
+        <div className={styles.item}>
+          <div className={styles.info}>
+            <div className={styles.subject}>Renewable Energy</div>
+            <div className={styles.time}>9:45 PM – 10:35 PM</div>
+          </div>
+          <div className={styles.controls}>
+            <button className={styles.btnOutline}>Details</button>
+            {/* <button className={styles.btnPrimary}>Join</button> */}
+          </div>
+        </div>
       </div>
+
     </section>
   );
 }

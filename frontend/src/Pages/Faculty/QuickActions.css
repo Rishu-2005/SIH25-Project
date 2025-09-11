@@ -1,0 +1,33 @@
+.quick-actions {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.quick-actions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-actions li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.live {
+  background: #2563eb;
+  color: white;
+}

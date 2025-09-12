@@ -1,0 +1,45 @@
+# Node modules (backend & frontend)
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Build directories
+dist/
+build/
+.out/
+.cache/
+
+# Uploads (if using local storage)
+uploads/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE / editor specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Misc
+*.log
+*.bak
+*.tmp

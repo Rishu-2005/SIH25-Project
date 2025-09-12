@@ -9,10 +9,10 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         {/* Dashboard with all its sections (default) */}
-        <Route path="/*" element={<StdDashboard />} />
+        <Route path="/StdDashboard" element={<StdDashboard />} />
         <Route path="/faculty/*" element={<FacDashboard />} />
 
         {/* Live lecture as a full separate page */}

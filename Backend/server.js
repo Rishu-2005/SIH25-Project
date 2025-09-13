@@ -6,11 +6,6 @@ import http from "http";
 import { Server } from "socket.io";
 import mongoose from "mongoose";
 
-
-console.log("Cloud Name:", process.env.CLOUDINARY_CLOUD_NAME);
-console.log("API Key:", process.env.CLOUDINARY_API_KEY);
-console.log("API Secret:", process.env.CLOUDINARY_API_SECRET);
-
 import cors from "cors";
 
 import authrouter from "./routes/authRoutes.js";

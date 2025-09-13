@@ -1,15 +1,24 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import http from "http";
 import { Server } from "socket.io";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
+
+
+console.log("Cloud Name:", process.env.CLOUDINARY_CLOUD_NAME);
+console.log("API Key:", process.env.CLOUDINARY_API_KEY);
+console.log("API Secret:", process.env.CLOUDINARY_API_SECRET);
+
 import cors from "cors";
 
-import authRoutes from "./routes/authRoutes.js";
-import lectureRoutes from "./routes/lectureRoutes.js";
+import authrouter from "./routes/authRoutes.js";
+import lecturerouter from "./routes/lectureRoutes.js";
+import lecturematrouter from "./routes/lecturematRoutes.js";
 // ... other route imports
 
-dotenv.config();
+
 const app = express();
 const server = http.createServer(app);
 
@@ -39,8 +48,9 @@ app.use(express.json());
 app.use("/uploads", express.static("uploads")); // serve local uploads in dev
 
 // Routes
-app.use("/api/auth", authRoutes);
-app.use("/api/lectures", lectureRoutes);
+app.use("/api/auth", authrouter);
+app.use("/api/lectures", lecturerouter);
+app.use("/api/lecturemat",lecturematrouter);
 // ... material/chat/request routes
 
 // Basic health
